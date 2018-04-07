@@ -1,10 +1,22 @@
+html, body, #root, .App {
+  height: 100%
+}
+
+.App-map {
+  height: calc(100% - 180px);
+}
+
+.container-fluid {
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
   height: 80px;
+  animation-delay: 2s;
 }
 
 .App-header {
@@ -20,17 +32,4 @@
 
 .App-intro {
   font-size: large;
-}
-
-.App-search {
-}
-
-.App-map {
-  height: 500px;
-  border: 2px solid black;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }

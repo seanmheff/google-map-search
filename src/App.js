@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import logo from './jibestream.png';
 import GoogleMapsLoader from 'google-maps';
 
-class App extends Component {
+class App extends React.Component {
 
   componentDidMount() {
     GoogleMapsLoader.LIBRARIES = ['places'];
     GoogleMapsLoader.KEY = 'AIzaSyDtuwsuOlHZYkxN5PRE7F7oB4H01Jop5s0';
     GoogleMapsLoader.load(google => {
       const map = new google.maps.Map(this._map, {
-        center: {lat: -33.8688, lng: 151.2195},
-        zoom: 13,
+        center: {lat: 23, lng: -18},
+        zoom: 2.25,
         mapTypeId: 'roadmap'
       });
 
@@ -70,16 +70,20 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App container-fluid">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src={logo} className="App-logo animated rotateIn" alt="logo" />
           <h1 className="App-title">Where would you like to go?</h1>
-          <input
-            type="text"
-            className="form-control"
-            ref={ref => (this._input = ref)}
-            placeholder="The world is your oyster..."
-          />
+          <div className="row">
+            <div className="col-md-6 offset-md-3">
+              <input
+                type="text"
+                className="form-control"
+                ref={ref => (this._input = ref)}
+                placeholder="The world is your oyster..."
+              />
+            </div>
+          </div>
         </header>
         <div className="App-map" ref={ref => (this._map = ref)} />
       </div>
