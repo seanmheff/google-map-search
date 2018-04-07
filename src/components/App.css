@@ -1,17 +1,13 @@
-html, body, #root, .App {
-  height: 100%
+.App {
+  height: 100%;
+  text-align: center;
+}
+.App-wrapper {
+  height: 100%;
 }
 
 .App-map {
   height: calc(100% - 180px);
-}
-
-.container-fluid {
-  padding: 0;
-}
-
-.App {
-  text-align: center;
 }
 
 .App-logo {
@@ -28,8 +24,4 @@ html, body, #root, .App {
 
 .App-title {
   font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
 }
