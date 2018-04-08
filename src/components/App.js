@@ -3,7 +3,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { loadMap } from '../actions'
 import { connect } from 'react-redux'
-import logo from '../images/jibestream.png';
+import logo from '../images/favicon.png';
 
 class App extends React.Component {
   componentDidMount() {
